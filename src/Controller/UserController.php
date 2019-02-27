@@ -61,7 +61,6 @@ class UserController extends AbstractFOSRestController
      */
     public function storeUser(Request $request, UserHandler $handler)
     {
-        var_dump($request->request);
         return new JsonResponse($this->repository->store($handler->handle($request->get('first_name'), $request->get('last_name'))), 200);
     }
 

@@ -25,7 +25,7 @@ class UserHandler
 
     public function handle($name, $surname, $id = false)
     {
-        $user = $id? $this->repository->find($id) : new User();
+        $user = $id? $this->repository->getById($id) : new User();
         $user->setFirstName($name);
         $user->setLastName($surname);
 

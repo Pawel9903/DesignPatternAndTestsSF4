@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use JsonSerializable;
 
 /**
  * User
@@ -10,8 +11,17 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table(name="user")
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
  */
-class User
+class User implements JsonSerializable
 {
+    public function jsonSerialize(): array
+    {
+        return [
+            'id'           => $this->id,
+            'first_name'        => $this->firstName,
+            'last_name'        => $this->lastName,
+        ];
+    }
+
     /**
      * @var int
      *

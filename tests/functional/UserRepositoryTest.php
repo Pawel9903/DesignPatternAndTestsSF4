@@ -21,7 +21,7 @@ class UserRepositoryTest extends \Codeception\Test\Unit
     public function testWhenCallGetByIdExistsExpectedNull() : void
     {
         $userRepository = $this->getModule('Doctrine2')->_getEntityManager()->getRepository(User::class);
-        $result = $userRepository->getById(7);
+        $result = $userRepository->getById(8);
         $this->assertIsObject($result);
     }
 }

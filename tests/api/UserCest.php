@@ -42,7 +42,13 @@ class UserCest
             'first_name' => 'test',
             'last_name' => 'test',
         ]);
-        $I->seeResponseCodeIs(201);
+//        $I->seeResponseJsonMatchesJsonPath('$.usr_id');
+//        $I->seeResponseJsonMatchesJsonPath('$.*');
+//        $I->seeResponseMatchesJsonType([
+//           'first_name' => 'test',
+//            'last_name' => 'test'
+//        ]);
+        $I->seeResponseCodeIs(HttpCode::OK);
         $I->seeResponseIsJson();
     }
 
