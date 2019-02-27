@@ -1,0 +1,2 @@
+tests/functional/UserRepositoryTest.php:testWhenCallGetByIdExistsExpectedNull
+tests/unit/UserHandlerTest.php:testWhenSendNameAndSurnameToUserHandler

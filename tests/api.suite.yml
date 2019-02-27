@@ -1,0 +1,11 @@
+actor: ApiTester
+modules:
+    enabled:
+        - \App\Tests\Helper\Api
+        - REST:
+              depends: PhpBrowser
+              url: http://servermail.localhost:9880
+
+groups:
+    slow: tests/_data/slow.txt
+    fast: tests/_data/fast.txt

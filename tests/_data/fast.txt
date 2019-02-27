@@ -1,0 +1,4 @@
+tests/api/UserCest.php:testWhenSendIdShowUser
+tests/api/UserCest.php:testWhenSendIdDeleteUser
+tests/api/UserCest.php:testWhenSendIdAddUser
+tests/api/UserCest.php:testTakeAllUsers
